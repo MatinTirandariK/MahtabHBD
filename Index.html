@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ابدیت برای تو</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="audio-intro" loop>
+        <source src="intro.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio-launch">
+        <source src="launch.mp3" type="audio/mp3">
+    </audio>
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>در حال رندرینگ جهان...</p>
+        </div>
+    </div>
+
+    <canvas id="webgl"></canvas>
+
+    <div id="ui-container">
+        <div class="intro-screen">
+            <h1 class="hero-title">تولدت مبارک</h1>
+            <p class="hero-sub">اینجا فقط برای خودت ساخته شده بگرد و بعد دکمه را بزن ...</p>
+            
+            <div class="interaction-hint">
+                <div class="mouse-icon"></div>
+                <span>جهان را تماشا کنید</span>
+            </div>
+            
+            <button id="launch-btn">
+                <span class="btn-bg"></span>
+                <span class="btn-text">🚀 پرواز به سمت ابدیت</span>
+            </button>
+        </div>
+
+        <div class="final-screen">
+            <h2 class="final-title">مهتاب</h2>
+            <p class="final-sub">تولدت مبارک پرنسس گوگولیی🎊🎉🎉</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
